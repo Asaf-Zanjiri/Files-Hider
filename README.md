@@ -2,7 +2,7 @@
 Have you ever wanted to hide your files from prying eyes? Well you're in luck! With this application you will be able to hide files within your system that even your operating system won't know exists!
 How does it work? The software is made with a driver, that hooks window's file query functions, and strips out the files you want hidden!
 
-*put gif here*
+![showcase(2)](https://user-images.githubusercontent.com/60044819/161398181-91ab970e-8e03-4cea-a52a-3c6d36ef7bbb.gif)
 
 ## Features
 - Intuitive User Interface to add/remove files to hide.
@@ -34,7 +34,7 @@ The user-interface has been made with Qt Library.
 - If you want to change the driver's name, simply change `unicodeDeviceName` & `unicodeSymLink` in driver.h (make sure you also edit the defines at mainwindow.h in the GUI code accordigly).
 
 ## Downloads
-*insert pre-compiled download here*
+![image](https://user-images.githubusercontent.com/60044819/161398104-52ec9007-ef1d-4d2d-9c60-7ca1b15df2d7.png) [FilesHider_Compiled.zip](https://github.com/Asaf-Zanjiri/Files-Hider/releases/tag/release-v1.0)
 
 ## Citations
 - https://www.unknowncheats.me/forum/c-and-c/59147-writing-drivers-perform-kernel-level-ssdt-hooking.html (Great reasource for information about drivers and hooking)
