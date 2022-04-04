@@ -117,7 +117,7 @@ void GetVolume(HANDLE FileHandle, PWCHAR volume)
 	// Initializing variables.
 	IO_STATUS_BLOCK queryIoStatusBlock;
 	PFILE_VOLUME_NAME_INFORMATION queryVolumeFileNameInformation; // Holds the device
-	SIZE_T allocSize = sizeof(PFILE_VOLUME_NAME_INFORMATION) + MAX_PATH;
+	SIZE_T allocSize = sizeof(PFILE_VOLUME_NAME_INFORMATION) + MAX_PATH * sizeof(WCHAR);
 	ULONG tag = 'pVol'; // Random tag name for ExAllocatePool2.
 	NTSTATUS queryStatus;
 
@@ -146,9 +146,12 @@ void GetVolume(HANDLE FileHandle, PWCHAR volume)
 /// <param name="path">Pointer to WCHAR list that holds the path value.</param>
 void GetPath(HANDLE FileHandle, PWCHAR path)
 {
+	WCHAR dir[MAX_PATH] = { 0 };
 	GetVolume(FileHandle, path);
-	GetDirectory(FileHandle, &path[wcslen(path)]);
-	wmemcpy(&path[wcslen(path)], L"\\\0", 2); // Appends `\` + terminating null byte to the path
+	GetDirectory(FileHandle, dir);
+	if (wcscmp(dir, L"\\\0")) // Checks if the returned directory path is root directory `\` If it is, there's no need to append `\`
+		wcscat(dir, L"\\\0"); // Appends `\` + terminating null byte to the path
+	wcscat(path, dir);
 }
 
 /// <summary>
