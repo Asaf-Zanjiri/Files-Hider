@@ -43,7 +43,7 @@ The user-interface has been made with Qt Library.
 - With FAT32 Volumes, Sometimes the software capitalizes the directory name in the path, which could result in the software not stripping out results.
 
 ## Downloads
-![image](https://user-images.githubusercontent.com/60044819/161398104-52ec9007-ef1d-4d2d-9c60-7ca1b15df2d7.png) [FilesHider_Compiled.zip](https://github.com/Asaf-Zanjiri/Files-Hider/releases/tag/release-v1.0)
+![image](https://user-images.githubusercontent.com/60044819/161398104-52ec9007-ef1d-4d2d-9c60-7ca1b15df2d7.png) [FilesHider_Compiled.zip](https://github.com/Asaf-Zanjiri/Files-Hider/releases)
 
 ## Citations
 - https://www.unknowncheats.me/forum/c-and-c/59147-writing-drivers-perform-kernel-level-ssdt-hooking.html (Great reasource for information about drivers and hooking)
