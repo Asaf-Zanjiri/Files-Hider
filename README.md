@@ -26,12 +26,21 @@ The user-interface has been made with Qt Library.
 
 ## Notes
 - You can compile the driver's code in Visual-Studio & GUI with Qt 5.15.1 MinGW 32-bit (If you have a problem with Qt dependencies when compiling, look up windeployqt).
-- Make sure you place both the driver and the GUI at the same folder (Otherwise the software might not find the driver).
 - Software has only been tested on Windows 10 Pro (10.0.19044 Build 19044).
 - The more paths you hide, the more you can anticipate performance delays.
 - This software is only compatible with 32-bit machines (Mainly due to PatchGuard).
 - Debug prints are still left inside the code. It's possible to view them by using software like DbgView (https://docs.microsoft.com/en-us/sysinternals/downloads/debugview).
 - If you want to change the driver's name, simply change `unicodeDeviceName` & `unicodeSymLink` in driver.h (make sure you also edit the defines at mainwindow.h in the GUI code accordigly).
+- Hidden files still exist on the disk. They're only being hidden from the operating system. Hence disk analsys software may be able to find the hidden files.
+
+## Common Issues
+### If the driver fails to load:
+- Disable the driver signature enforcement in windows advanced startup.
+- Make sure you're on a 32 bit machine.
+- Make sure you place both the driver and the GUI at the same folder (Otherwise the software might not find the driver).
+
+### Known Bugs:
+- With FAT32 Volumes, Sometimes the software capitalizes the directory name in the path, which could result in the software not stripping out results.
 
 ## Downloads
 ![image](https://user-images.githubusercontent.com/60044819/161398104-52ec9007-ef1d-4d2d-9c60-7ca1b15df2d7.png) [FilesHider_Compiled.zip](https://github.com/Asaf-Zanjiri/Files-Hider/releases/tag/release-v1.0)
