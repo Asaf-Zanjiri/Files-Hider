@@ -30,7 +30,7 @@ The user-interface has been made with Qt Library.
 - The more paths you hide, the more you can anticipate performance delays.
 - This software is only compatible with 32-bit machines (Mainly due to PatchGuard).
 - Debug prints are still left inside the code. It's possible to view them by using software like DbgView (https://docs.microsoft.com/en-us/sysinternals/downloads/debugview).
-- If you want to change the driver's name, simply change `unicodeDeviceName` & `unicodeSymLink` in driver.h (make sure you also edit the defines at mainwindow.h in the GUI code accordigly).
+- If you want to change the driver's name or anything setting related, simply change their defines in string_tools.h (make sure you also edit the defines at mainwindow.h in the GUI code accordigly).
 - Hidden files still exist on the disk. They're only being hidden from the operating system. Hence disk analsys software may be able to find the hidden files.
 
 ## Common Issues
