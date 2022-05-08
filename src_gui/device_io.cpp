@@ -17,7 +17,5 @@ bool device_io::CloseIoHandle(HANDLE hIo)
 
 bool device_io::WriteToDevice(HANDLE hDevice, wchar_t* inBuffer)
 {
-    return WriteFile(hDevice, inBuffer, wcslen(inBuffer) * sizeof(wchar_t), 0, 0);;
+    return WriteFile(hDevice, inBuffer, wcslen(inBuffer) * sizeof(wchar_t), 0, 0);
 }
-
-
